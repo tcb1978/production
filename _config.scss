@@ -1,0 +1,174 @@
+@font-face {font-family: "AvenirNext";
+  src: url("//db.onlinewebfonts.com/t/f3df85918e3f1ba8a7b13be9b47882ce.eot");
+  src: url("//db.onlinewebfonts.com/t/f3df85918e3f1ba8a7b13be9b47882ce.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/f3df85918e3f1ba8a7b13be9b47882ce.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/f3df85918e3f1ba8a7b13be9b47882ce.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/f3df85918e3f1ba8a7b13be9b47882ce.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/f3df85918e3f1ba8a7b13be9b47882ce.svg#Avenir Next") format("svg");
+}
+
+
+/*colors*/
+
+$primary: #002236;
+$secondary: #175072;
+$tertiary: #376882;
+$quatinery: #548ea6;
+$quinary: #c5c8cd;
+$white: #fff;
+
+
+/* font sizes */
+$small: $small;
+$large: $large;
+$tertiaryHeader: 24px;
+$secondaryHeader: 30pt;
+$primaryHeader: 48pt;
+$button: 16px;
+
+
+/*mixins*/
+
+/*font element mixins*/
+@mixin antialiasing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin AvenirBold {
+  font-family: 'AvenirNext', sans-serif;
+  @include antialiasing;
+  font-weight: bold;
+}
+@mixin AvenirRegular {
+  font-family: 'AvenirNext', sans-serif;
+  @include antialiasing;
+  font-weight: normal;
+}
+
+@mixin headerPrimary {
+  color: $primary;
+  @include AvenirBold;
+  font-size: $primaryHeader;
+  text-transform: uppercase;
+}
+@mixin headerSecondary {
+  color: $primary;
+  @include AvenirBold;
+  font-size: $secondaryHeader;
+  text-transform: uppercase;
+}
+@mixin headerTertiary {
+  color: $primary;
+  @include AvenirBold;
+  font-size: $tertiaryHeader;
+  text-transform: uppercase;
+}
+@mixin headerQuatinary {
+  color: $quinary;
+  @include AvenirBold;
+  font-size: $large;
+  text-transform: uppercase;
+}
+@mixin overline {
+  color: $primary;
+  @include AvenirBold;
+  font-size: $small;
+}
+@mixin bodyLarge {
+  color: $primary;
+  @include AvenirRegular;
+  font-size: $large;
+}
+@mixin bodySmall {
+  color: $primary;
+  @include AvenirRegular;
+  font-size: $small;
+}
+
+@mixin button {
+  background-color: $quatinery;
+  color: $white;
+  @include AvenirBold;
+  font-size: $button;
+}
+
+@mixin buttonHover {
+  background-color: $quinary;
+  color: $white;
+  @include AvenirBold;
+  font-size: $button;
+}
+
+@mixin textLink {
+  color: $quatinery;
+  @include AvenirRegular;
+  font-size: $large;
+  text-decoration: underline;
+}
+
+@mixin textLinkHover {
+  color: $quinary;
+  @include AvenirBold;
+  font-size: $large;
+  text-decoration: underline;
+}
+
+@mixin textButton {
+  color: $quatinery;
+  @include AvenirBold;
+  font-size: $small;
+  text-decoration: none;
+}
+
+@mixin textButtonHover {
+  color: $quatinery;
+  @include AvenirBold;
+  font-size: $small;
+  text-decoration: underline;
+}
+
+
+/*breakpoints*/
+$tablet: 70em;
+$desktop: 50em;
+@mixin breakpoint($point) {
+
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+ }
+
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+ }
+
+   @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
+ }
+
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+ }
+
+ @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+ }
+
+}
+
+/* Social */
+@mixin pillHover {
+  background-color: $primary;
+}
+
+@mixin facebookPill {
+  background-color: $secondary;
+}
+
+@mixin twitterPill {
+  background-color: $quatinery;
+}
+
+@mixin youtubePill {
+  background-color: $tertiary;
+}

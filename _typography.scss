@@ -1,0 +1,422 @@
+// --- Window Sizes --- //
+$screen-width-xs: 576px;
+$screen-width-sm: 768px;
+$screen-width-md: 992px;
+$screen-width-lg: 1200px;
+$screen-width-lgxl: 1300px;
+$screen-width-xl: 1330px;
+
+
+// Fonts - Main fonts - OVERRIDE when Theme for Senate/House site is selected //
+/*
+font-family:'Corinthian W01 Light';
+font-family:'Corinthian W01 Bold';
+font-family:'Memphis LT CYR W01 Bold';
+*/
+
+@font-face {
+  font-family: "Corinthian Light";
+  src: url("//db.onlinewebfonts.com/t/4b089ce6d8e0074e7a82509554e59106.eot");
+  src: url("//db.onlinewebfonts.com/t/4b089ce6d8e0074e7a82509554e59106.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/4b089ce6d8e0074e7a82509554e59106.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/4b089ce6d8e0074e7a82509554e59106.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/4b089ce6d8e0074e7a82509554e59106.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/4b089ce6d8e0074e7a82509554e59106.svg#CorinthianW01-Light") format("svg");
+}
+
+@font-face {
+  font-family: "Corinthian Bold";
+  src: url("//db.onlinewebfonts.com/t/57c9093ef67a763311f2011b80bf20dc.eot");
+  src: url("//db.onlinewebfonts.com/t/57c9093ef67a763311f2011b80bf20dc.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/57c9093ef67a763311f2011b80bf20dc.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/57c9093ef67a763311f2011b80bf20dc.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/57c9093ef67a763311f2011b80bf20dc.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/57c9093ef67a763311f2011b80bf20dc.svg#CorinthianW01-Bold") format("svg");
+}
+
+@font-face {
+  font-family: "Memphis Light";
+  src: url("//db.onlinewebfonts.com/t/2fb05115bc2b52b46daa6f262d9fdeab.eot");
+  src: url("//db.onlinewebfonts.com/t/2fb05115bc2b52b46daa6f262d9fdeab.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/2fb05115bc2b52b46daa6f262d9fdeab.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/2fb05115bc2b52b46daa6f262d9fdeab.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/2fb05115bc2b52b46daa6f262d9fdeab.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/2fb05115bc2b52b46daa6f262d9fdeab.svg#Memphis") format("svg");
+}
+
+@font-face {
+  font-family: "Memphis Bold";
+  src: url("//db.onlinewebfonts.com/t/296478579d48c90eba2872329de2fd34.eot");
+  src: url("//db.onlinewebfonts.com/t/296478579d48c90eba2872329de2fd34.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/296478579d48c90eba2872329de2fd34.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/296478579d48c90eba2872329de2fd34.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/296478579d48c90eba2872329de2fd34.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/296478579d48c90eba2872329de2fd34.svg#Memphis") format("svg");
+}
+
+@mixin primary-font {
+  font-family: 'Corinthian Light', sans-serif;
+}
+
+@mixin secondary-font {
+  font-family: 'Corinthian Bold', sans-serif;
+}
+
+@mixin tertiary-font-light {
+  font-family: 'Memphis Light', sans-serif;
+}
+
+@mixin tertiary-font {
+  font-family: 'Memphis Bold', sans-serif;
+}
+
+@mixin footer-links {
+  @include secondary-font;
+  font-size: 13px;
+  color: $primary;
+  text-transform: uppercase;
+}
+
+@mixin footer-links-hover {
+  color: #005677;
+  text-decoration: none;
+}
+
+@mixin pills {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: $primary-light;
+  border: 1px solid $primary-light;
+  border-radius: 100%;
+  color: $white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 35px;
+  min-width: 35px;
+}
+
+@mixin pills-hover {
+  background-color: $primary-light-hover;
+}
+
+//Additional Font options - Set additional fonts here, like italic fonts, etc //
+
+// --- colors --- //
+
+$primary: #202945;
+$primary-hover: #12192a;
+
+$primary-light: #005677;
+$primary-light-hover: #0077a0;
+
+$primary-dark: #202945;
+$primary-dark-hover: darken($primary-dark, 15%);
+
+$primary-grey: #e0e7f1;
+$primary-grey-hover: #d0d8e4;
+
+$primary-green: #00ac69;
+$primary-green-hover: darken($primary-green, 15%);
+
+// ------- //
+
+$secondary: #363636;
+$secondary-hover:darken($secondary, 10%);
+
+$tertiary: #83b1ab;
+$tertiary-hover: darken($tertiary, 10%);
+
+$quartenary: #00ac69;
+$quartenary-hover: darken($quartenary, 10%);
+
+
+$link-color: $quartenary;
+$link-color-hover: $quartenary-hover;
+
+$white: #fff;
+$black: #0e0e0e;
+
+// ------- //
+
+$btn-color: #202945;
+$btn-color-hover: #fff;
+
+$btn-bg: $primary-light;
+$btn-bg-hover: $primary-light-hover;
+
+$btn-bgalt: $tertiary;
+$btn-bgalt-hover: $tertiary-hover;
+
+$btn-border: $primary-dark;
+$btn-border-hover: $primary-dark-hover;
+
+$btn-bgaltborder: $tertiary;
+$btn-bgaltborder-hover: $tertiary-hover;
+
+// ------- //
+
+// Social Colors //
+$youtube: #005677;
+$facebook: #005677;
+$twitter: #005677;
+$instagram: #005677;
+$instagram-hover: #0077a0;
+$flickr: #005677;
+$flickr-hover: #0077a0;
+
+// Font Sizes //
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-smmd: 14px;
+$font-size-default: 16px;
+$font-size-md: 18px;
+$font-size-mdlg: 20px;
+$font-size-lg: 22px;
+$font-size-xlg: 24px;
+$font-size-xxlg: 30px;
+$font-size-xxxlg: 34px;
+$font-size-xxxxlg: 40px;
+
+$font-size-h1: 50px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 24px;
+$font-size-overline: 16px;
+$font-size-body: 16px;
+$font-size-nav-links: 13px;
+// Page Spacing
+$interior-page-margin-height: 5rem;
+
+// Transitions
+$transition-hover: 100ms ease-in;
+
+body {
+  color: $secondary;
+  @include fluid-type(320px, $screen-width-md, 13px, 20px);
+  position: relative;
+}
+
+// Buttons //
+
+a {
+
+  color: $link-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+
+}
+
+input,
+select,
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
+.inline-item {
+  display: inline-block;
+}
+
+
+.btn {
+  @include secondary-font;
+  background-color: $primary-light;
+  padding: 10px 15px;
+  color: $white;
+  background-color: $btn-bg;
+  border: 4px solid;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+
+  &:active,
+  &:hover {
+    color: $white;
+    background-color: $btn-bg-hover;
+  }
+
+}
+
+.btn-primary {
+  background-color: $btn-bg;
+  border-color: $btn-bg;
+
+  &:not(:disabled):not(.disabled):active,
+  &:hover {
+    background-color: $btn-bg-hover;
+    border-color: $btn-bg-hover;
+  }
+
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  background: none;
+  -webkit-transition: $transition-hover;
+  -o-transition: $transition-hover;
+  transition: $transition-hover;
+  -webkit-transition-property: background-color border-color;
+  -o-transition-property: background-color border-color;
+  transition-property: background-color border-color;
+
+  &:not(:disabled):not(.disabled):active,
+  &:hover {
+    color: white;
+  }
+}
+
+.btn-outline-primary {
+  border-color: $primary-light;
+  color: $primary-light;
+
+  &:not(:disabled):not(.disabled):active,
+  &:hover {
+    background-color: $primary-light;
+    border-color: $primary-light;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $quartenary;
+  color: $quartenary;
+
+  &:not(:disabled):not(.disabled):active,
+  &:hover {
+    background-color: $quartenary;
+    border-color: $quartenary;
+  }
+}
+
+.input-group {
+  >.form-control {
+    border-radius: 0;
+    border: 4px solid $primary-grey;
+    padding: 10px 15px;
+    height: auto;
+
+    &:focus {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-color: $primary-light;
+    }
+  }
+
+  >.input-group-append {
+    margin-left: 0;
+  }
+
+  &-lg>.form-control {
+    font-size: 17px;
+    padding: 15px 20px;
+  }
+
+  &-sm>.form-control {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  &-xs>.form-control {
+    font-size: $font-size-smmd;
+    padding: 0 10px;
+  }
+}
+
+.btn-lg {
+  font-size: 17px;
+  padding: 15px 20px;
+}
+
+.btn-sm {
+  @include tertiary-font();
+  padding: 5px 15px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.btn-xs {
+
+  font-size: $font-size-smmd;
+  padding: 0 10px;
+
+}
+
+.link {
+  color: $primary-light;
+  font-weight: bold;
+  line-height: 1;
+
+  &:hover {
+    color: $primary-light-hover;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '▸';
+    font-size: 1.3em;
+    line-height: 0.5;
+    margin-left: 0.2em;
+  }
+}
+
+// headers //
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  @include secondary-font;
+}
+
+h1 {
+  font-size: $font-size-h1 * 0.5;
+
+  @media(min-width: $screen-width-xs) {
+    font-size: $font-size-h1;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2 * 0.6;
+
+  @media(min-width: $screen-width-xs) {
+    font-size: $font-size-h2;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3 * 0.7;
+  margin-bottom: 1em;
+
+  @media(min-width: $screen-width-xs) {
+    font-size: $font-size-h3;
+  }
+}
+
+.card {
+  border-radius: 0;
+  border: 2px solid $primary-grey;
+}
+
+.amend-textarea {
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+  }
+}
